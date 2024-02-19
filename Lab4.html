@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generar Tabla</title>
+</head>
+<body>
+    <script>
+        function generarTabla() {
+            var numero = prompt("Ingresa un número:");
+            
+            document.write("<table>");
+                document.write("<tr><th>Número</th><th>Cuadrado (n^2)</th><th>Cubo (n^3)</th></tr>");
+
+            for (var i = 1; i <= numero; i++) {
+                var cuadrado = i * i;
+                var cubo = i * i * i;
+
+                document.write("<tr><td>" + i + "</td><td>" + cuadrado + "</td><td>" + cubo + "</td></tr>");
+            }
+            document.write("</table>");
+        }
+
+        generarTabla();
+    </script>
+</body>
+</html>
