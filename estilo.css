@@ -1,0 +1,14 @@
+/* etiqueta*/
+body {
+    color: blue;
+} 
+
+/* clase*/ 
+.red {
+    color: red;
+} 
+
+ /* id*/
+ #diamantes {
+    color:cyan;
+}
