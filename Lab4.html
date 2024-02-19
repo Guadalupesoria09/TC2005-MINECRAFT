@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        function generarTabla() {
+        /*function generarTabla() {
             var numero = prompt("Ingresa un número:");
             
             document.write("<table>");
@@ -22,7 +22,37 @@
             document.write("</table>");
         }
 
-        generarTabla();
+        generarTabla();*/
+
+
+        function generarNumerosAleatorios() {
+            return Math.floor(Math.random() * 10); //Numero aleatorio de 0 a 10
+        }
+
+        function verificarRespuesta() {
+            var num1 = generarNumerosAleatorios();
+            var num2 = generarNumerosAleatorios();
+
+            var sumaCorrecta = num1 + num2;
+
+            var tiempoI = new Date(); 
+            var respuestaUsuario = prompt("¿Cuál es la suma de " + num1 + " más " + num2 + "?");
+            var tiempoF = new Date(); 
+            var tiempoTranscurrido = (tiempoF - tiempoI) / 1000; 
+
+            var respuestaCorrecta = parseInt(respuestaUsuario) === sumaCorrecta;
+
+            if (respuestaCorrecta) {
+                document.write("¡Respuesta correcta! <br>");
+            } else {
+                document.write("Respuesta incorrecta. La respuesta correcta es: " + sumaCorrecta + "<br>");
+            }
+
+            document.write("Tiempo transcurrido: " + tiempoTranscurrido + " segundos");
+        }
+
+        verificarRespuesta();
+
     </script>
 </body>
 </html>
