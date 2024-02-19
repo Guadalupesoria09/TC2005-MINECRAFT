@@ -25,7 +25,7 @@
         generarTabla();*/
 
 
-        function generarNumerosAleatorios() {
+        /*function generarNumerosAleatorios() {
             return Math.floor(Math.random() * 10); //Numero aleatorio de 0 a 10
         }
 
@@ -51,8 +51,33 @@
             document.write("Tiempo transcurrido: " + tiempoTranscurrido + " segundos");
         }
 
-        verificarRespuesta();
+        verificarRespuesta();*/
 
+        
+        function contador(arreglo) {
+            var negativos = 0;
+            var ceros = 0;
+            var positivos = 0;
+
+            for (var i = 0; i < arreglo.length; i++) {
+                if (arreglo[i] < 0) {
+                    negativos++;
+                } else if (arreglo[i] === 0) {
+                    ceros++;
+                } else {
+                    positivos++;
+                }    
+            }  
+
+            return {
+                negativos: negativos,
+                ceros: ceros,
+                positivos: positivos
+            };
+        }
+
+        console.log(contador([4, -8, 0, 1, 0, -2])); 
+        console.log(contador([-1, 0, 0, -7, 9, 0])); 
     </script>
 </body>
 </html>
