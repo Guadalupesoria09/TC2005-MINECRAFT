@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validador de password</title>
+</head>
+<body>
+    <h2>Validar password</h2>
+        <form action="enviar.php" method="post">
+            <label for="Password">Password:</label>
+            <input type="text" id="Password" name="Password" required>
+            <label for="Validar password">Validar password:</label>
+            <input type="Validar password" id="Validar password" name="Validar password" required>
+            <button type="submit">Enviar mensaje</button>
+        </form>
+
+        <script>
+            function validarPassword (){ 
+                var password = prompt ("Contraseña: ");
+                var validar = promt ("Confirma contraseña: ");
+            } 
+        </script>
+         

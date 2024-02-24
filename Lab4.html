@@ -53,8 +53,8 @@
 
         verificarRespuesta();*/
 
-        
-        function contador(arreglo) {
+
+        /*function contador(arreglo) {
             var negativos = 0;
             var ceros = 0;
             var positivos = 0;
@@ -77,7 +77,34 @@
         }
 
         console.log(contador([4, -8, 0, 1, 0, -2])); 
-        console.log(contador([-1, 0, 0, -7, 9, 0])); 
+        console.log(contador([-1, 0, 0, -7, 9, 0]));*/
+
+
+        function promedios (matriz){
+            var promedios = [];
+        
+            for (var i = 0; i < matriz.length; i++) {
+                var suma = 0;
+
+                for (var j = 0; j < matriz[i].length; j++) {
+                    suma += matriz[i][j];
+                }
+
+                var promedio = suma / matriz[i].length;
+                promedios.push(promedio);
+            }
+
+            return promedios;
+        }
+
+        var matriz = [
+            [7, 5, 9],
+            [8, 8, 6],
+            [7, 8, 9]
+        ];
+
+        console.log(promedios(matriz));
+        
     </script>
 </body>
 </html>
