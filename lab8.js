@@ -21,6 +21,24 @@ function promedio (arreglo){
 const numeros = [10, 2, 30, 15, 4, 6, 2, 9, 19]
 console.log("Promedio del arreglo: ",promedio(numeros)); 
 
+//Metodo de fibonacci
+const fibonacci = () => {
+    console.log ("Esta es una sucesión de fibonacci, muestra los primeros 10 digitos");
+    let primerNumero = 0;
+    let segundoNumero = 1;
+    let sumaNumeros = 0;
+
+    console.log(primerNumero);
+    for(let i = 0; i < 9; i++){
+        sumaNumeros = primerNumero + segundoNumero;
+        console.log(sumaNumeros);
+        primerNumero = segundoNumero;
+        segundoNumero = sumaNumeros;
+    }
+    return(sumaNumeros);
+}
+console.log(fibonacci());
+
 // String en txt
 const escribir = ()=>{
     readline.question('Escribe algo: ', palabra => {
@@ -30,3 +48,4 @@ const escribir = ()=>{
     })
 }
 escribir();
+
